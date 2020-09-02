@@ -1,0 +1,452 @@
+@charset "utf-8";
+
+body,
+#gameOver,
+#gameOverTable,
+.cells,
+.cellsLayout *,
+.game-wrapper * {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	background-color: black;
+}
+
+.game-wrapper h1,
+.game-wrapper h2,
+.cellsLayout h1 {
+	color: white;
+	background-color: transparent;
+}
+
+.game-wrapper span,
+.cellsLayout span {
+	background-color: transparent;
+}
+
+.state {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.tables {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.cells {
+	display: table-cell;
+	background-color: rgba(0, 0, 0, 0.5);
+	vertical-align: middle;
+}
+
+#menu {
+	display: block;
+}
+
+#naverAPI {
+	background: url(../res/NAVER_OpenAPI_c_ver_rev.png);
+	background-size: 100% 100%;
+	width: 111px;
+	height: 26px;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	z-index: 999;
+}
+
+#title {
+	font-size: 60px;
+}
+
+.game-wrapper .caption {
+	background: transparent;
+	font-size: 0.95rem;
+	color: rgba(175, 175, 175, 100);
+}
+
+#src1, #src2 {
+	position: fixed;
+	background-color: transparent;
+	color: gray;
+	text-shadow: 1px 1px 1px black;
+}
+
+#src2 {
+	bottom: 20px;
+	right: 20px;
+}
+
+#score {
+	position: fixed;
+	background-color: transparent;
+	top: 20px;
+	left: 20px;
+}
+
+#various {
+	position: absolute;
+	background-color: white;
+	color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px; /* width의 절반 */
+	margin-top: -40px; /* height의 절반 */
+	line-height: 80px;
+}
+
+#image1 {
+	background-size: 100% 100%;
+	float: left;
+}
+
+#image2 {
+	background-size: 100% 100%;
+	float: right;
+}
+
+#menuTable {
+	background-image: url(../res/memu.gif);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+
+#gameOverTable {
+	background-image: url(../res/kidpepe.gif);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+
+#confirm, #nickname {
+	position: relative;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 8px 0;
+	font-size: 16px;
+	color: white;
+	border: 0px solid white;
+	border-bottom: 1px solid white;
+	width: auto;
+	height: auto;
+	transition-duration: 0.1s;
+	font-size: 16px;
+	margin: 15px auto;
+	border-radius: 0px;
+}
+
+span { color: white; }
+
+.game-wrapper button,
+.cellsLayout button {
+	transition-duration: 0.1s;
+	width: 150px;
+	height: 40px;
+	font-size: 1.3rem;
+	display: block;
+	margin: 15px auto;
+	border: 2px solid white;
+	border-radius: 25px;
+	background-color: transparent; /*투명*/
+	color: white;
+}
+
+.game-wrapper button:active,
+.cellsLayout button:active {
+	outline: none;
+	background-color: gray;
+	color: white;
+}
+
+.game-wrapper button:focus,
+.cellsLayout button:focus {
+	outline: none;
+}
+
+/* 상태 표시 원 뒤집기 효과*/
+
+#thecircle {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px; /* width의 절반 */
+	margin-top: -40px; /* height의 절반 */
+	background-color: transparent;
+
+	-ms-transform-style: preserve-3d; /*인익 엣지*/
+	-webkit-transform-style: preserve-3d; /*크롬*/
+	-moz-transform-style: preserve-3d; /*파폭*/
+	-o-transform-style: preserve-3d; /*오페라*/
+	transform-style: preserve-3d;
+
+	-ms-transition: all 1s ease; /*인익 엣지*/
+	-webkit-transition: all 1s ease; /*크롬*/
+	-moz-transition: all 1s ease; /*파폭*/
+	-o-transition: all 1s ease; /*오페라*/
+	transition: all 1s ease;
+
+	/*앞면 transform: rotateY(0deg);*/
+	/*뒷면 transform: rotateY(180deg);*/
+}
+
+#front {
+	position: absolute;
+	background: white;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	line-height: 80px;
+
+	-ms-backface-visibility: hidden; /*인익 엣지*/
+	-webkit-backface-visibility: hidden; /*크롬*/
+	-moz-backface-visibility: hidden; /*파폭*/
+	-o-backface-visibility: hidden; /*오페라*/
+	backface-visibility: hidden;
+}
+
+#back {
+	position: absolute;
+	background: white;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	line-height: 80px;
+	transform: rotateY(180deg);
+
+	-ms-backface-visibility: hidden; /*인익 엣지*/
+	-webkit-backface-visibility: hidden; /*크롬*/
+	-moz-backface-visibility: hidden; /*파폭*/
+	-o-backface-visibility: hidden; /*오페라*/
+	backface-visibility: hidden;
+}
+
+/* pc버전 버튼 애니메이션 */
+
+.game-wrapper .pcbttn:hover,
+.cellsLayout .pcbttn:hover {
+ cursor: pointer;
+ outline: none;
+ animation: shake 0.2s linear 1;
+ -webkit-animation: shake 0.2s linear 1;
+ -moz-animation: shake 0.2s linear 1;
+ -o-animation: shake 0.2s linear 1;
+ -ms-animation: shake 0.2s linear 1;
+}
+
+@keyframes shake {
+  33% {
+    transform: rotateX(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+  }
+  66% {
+    transform: rotateX(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    -o-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateX(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+  }
+}
+
+#queryInsertUpdate { background-color: rgba(255, 255, 255, 0); }
+
+.sourceLink { text-decoration: underline; }
+.sourceLink:hover { cursor: pointer; }
+
+/**
+ * @author http://www.cosmosfarm.com/
+ */
+
+.share-buttons-default {
+	overflow: hidden;
+	z-index: 1;
+}
+.share-buttons-default.align-left { text-align: left; }
+.share-buttons-default.align-center { text-align: center; vertical-align: middle; }
+.share-buttons-default.align-right { text-align: right; }
+
+.share-buttons-default img { display: inline; margin: 0; padding: 0; width: 24px !important; height: 24px !important; vertical-align: middle; max-width: 100%; border: 0; }
+.share-buttons-default .share-button-title { display: inline-block; margin: 0 0 5px 0; vertical-align: middle; }
+.share-buttons-default .share-button { transition-duration: .3s; }
+.share-buttons-default .share-button,
+.share-buttons-default .share-button:link,
+.share-buttons-default .share-button:visited,
+.share-buttons-default .share-button:hover,
+.share-buttons-default .share-button:focus,
+.share-buttons-default .share-button:active { margin: 0 0px 5px 0; padding: 0; font-size: 11px; font-weight: normal; line-height: 11px; text-align: left; border: 0; border-radius: 0; letter-spacing: normal; cursor: pointer; vertical-align: middle; text-shadow: none; box-shadow: none; }
+
+.share-buttons-default .share-button:hover,
+.share-buttons-default .share-button:focus,
+.share-buttons-default .share-button:active { opacity: 0.8; }
+
+.share-buttons-default .naver { background-color: #23b200; color: white; }
+.share-buttons-default .facebook { background-color: #3b5998; color: white; }
+.share-buttons-default .twitter { background-color: #1da1f2; color: white; }
+.share-buttons-default .band { background-color: #11c373; color: white; }
+.share-buttons-default .kakaostory { background-color: #fccb00; color: white; }
+.share-buttons-default .kakaotalk { background-color: #f4e100; color: white; }
+.share-buttons-default .google { background-color: #de5449; color: white; }
+
+
+
+/* 푸터 */
+
+.footer #button {
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background: url(../res/footerbttn.png);
+	background-size: 100% 100%;
+	margin: auto auto;
+	position: relative;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	z-index: 500;
+}
+
+.footer #button:hover { cursor: pointer; }
+
+.footer {
+	bottom:0;
+	left:0;
+	position:fixed;
+	width: 100%;
+	height: 2em;
+	overflow:hidden;
+	margin:0 auto;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	z-index: 300;
+}
+
+/*
+.footer:hover {
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+	height: 10em;
+}
+*/
+
+.footer #container {
+	margin-top:5px;
+	width:100%;
+	height:100%;
+	position:relative;
+	background: black;
+}
+
+.footer #cont {
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	display:table;
+}
+
+.footer_center {
+	position:relative;
+	width:100%;
+	height:100%;
+	float:left;
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.footer p {
+	position:relative;
+	color: white;
+	width:100%;
+	height:100%;
+	font-size: 13px;
+	font-weight: 100;
+}
+
+/* 스마트폰 가로모드 요소 크기 조절 */
+
+#title {
+	width: 240px; height: 135px;
+}
+
+@media all and (max-width: 500px) {
+	.footer p { font-size: 11px; }
+}
+
+@media all and (min-height: 555px) and (max-height: 649px) {
+	#title {
+		width: 144px; height: 81px;
+	}
+
+	h1, h2 {
+		font-size: 1.2rem
+	}
+
+	.game-wrapper button,
+	.cellsLayout button {
+		width: 125px;
+		height: 31.25px;
+		font-size: 1.2rem;
+	}
+}
+
+@media all and (max-height: 555px) {
+	.footer p { font-size: 10px; }
+
+	#title {
+		width: 144px; height: 81px;
+	}
+
+	h1, h2 {
+		font-size: 1.0rem
+	}
+
+	.game-wrapper button,
+	.cellsLayout button {
+		width: 100px;
+		height: 25px;
+		font-size: 1.0rem;
+	}
+
+	.footer #button {
+		width: 45px;
+		height: 45px;
+		border-radius: 45px;
+	}
+
+	#smartbr {
+		display: none;
+	}
+
+  #explanation { display:none; }
+}

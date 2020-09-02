@@ -1,0 +1,13 @@
+<FilesMatch ".(ini|key|db|cache|csr|crt)$"> 
+  Require all denied
+  Require host pickey.tk
+  Require host localhost
+  Require ip 127.0.0.1
+</FilesMatch>
+
+<FilesMatch "^result"> 
+  Require all denied
+  Require host pickey.tk
+  Require host localhost
+  Require ip 127.0.0.1
+</FilesMatch>

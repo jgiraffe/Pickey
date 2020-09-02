@@ -1,0 +1,21 @@
+/* 가로모드 */
+
+#image1 {
+	width: 50%;
+	height: 100%;
+}
+
+#image2{
+	width: 50%;
+	height: 100%;
+}
+
+#src1 {
+	bottom: 20px;
+	left: 20px;
+}
+
+#pongSrc {
+	bottom: 20px;
+	left: 20px;
+}

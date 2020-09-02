@@ -1,0 +1,10 @@
+[26-Dec-2018 12:49:16 UTC] PHP Warning:  copy(http://www.jung.daegu.kr/new/board/data/board_147/20161221_144745.jpg): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/ff354/public_html/keyword-image/request-method/dowload-url.php on line 19
+[26-Dec-2018 12:49:17 UTC] PHP Warning:  copy(http://www.jung.daegu.kr/new/board/data/board_147/20161221_144745.jpg): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/ff354/public_html/keyword-image/request-method/dowload-url.php on line 19
+[26-Dec-2018 12:49:22 UTC] PHP Warning:  copy(http://www.jung.daegu.kr/new/board/data/board_147/20161221_144745.jpg): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/ff354/public_html/keyword-image/request-method/dowload-url.php on line 19
+[26-Dec-2018 12:49:55 UTC] PHP Warning:  copy(http://www.jung.daegu.kr/new/board/data/board_147/20161221_144745.jpg): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/ff354/public_html/keyword-image/request-method/dowload-url.php on line 19
+[26-Dec-2018 12:50:08 UTC] PHP Warning:  copy(http://www.jung.daegu.kr/new/board/data/board_147/20161221_144745.jpg): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/ff354/public_html/keyword-image/request-method/dowload-url.php on line 19

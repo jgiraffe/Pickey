@@ -1,0 +1,11 @@
+User-agent: *
+Disalllow:/data_processor/
+Disalllow:/keyword-image/
+Disalllow:/searchad-naver/
+Disalllow:/trend-naver/
+Disalllow:/res/
+Disalllow:/ssl/
+Disalllow:/.well-known/
+Disalllow:/layout/
+Disalllow:/processed_result/
+Disalllow:/query/

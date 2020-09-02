@@ -1,0 +1,12 @@
+backup_else/htdocs/WebContent/trend-naver/keyword/*.json
+backup_else/htdocs/WebContent/trend-naver/result/*.json
+backup_else/htdocs/WebContent/searchad-naver/*.json
+
+WebContent/trend-naver/keyword/*.json
+WebContent/trend-naver/result/*.json
+WebContent/searchad-naver/*.json
+
+/**/*.ini
+WebContent/ShareAPIReference.txt
+
+WebContent/ssl/

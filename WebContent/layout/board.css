@@ -1,0 +1,203 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: white;
+}
+
+body {
+	background-color: black;
+}
+
+#wrapper #filter {
+	width: 100%;
+	height: 100%;
+    text-align:center;
+}
+
+#uiSet{
+    text-align:center;
+}
+
+#uiSet a, #uiSet p {
+	text-decoration: none;
+	display: inline;
+}
+
+button {
+	transition-duration: 0.1s;
+	background-color: transparent;
+	color: white;
+	font-size: 1.3rem;
+	border: 2px solid white;
+	border-radius: 25px;
+}
+button:hover {
+	cursor: pointer;
+}
+
+button:active {
+	background-color: white;
+	color: black;
+}
+
+#logo img {
+	margin-left: 10px;
+    float:left;
+	width: 192px;
+	height: 108px;
+}
+
+
+#title img {
+	width: 360px;
+	height: 108px;
+}
+
+#buttonWrapper{
+	margin-right: 10px;
+    float:right;
+	display: inline;
+	width: 198px;
+	height: 108px;
+}
+
+.selectionButton {
+	margin-top: 10px;
+	width: 178px;
+	height: 39px;
+	diplay: block;
+}
+
+#leaderBoard {
+	display: block;
+	width: 100%;
+}
+
+#leaderBoard * {
+	text-align: center;
+	background-color: transparent;
+}
+
+#boardHeader th {
+	background-color: rgba(255, 255, 255, 100);
+	color: black;
+	font-size: 1.4rem;
+}
+
+#rankHeader {
+	width: 3000px;
+}
+
+#nicknameHeader {
+	width: 12000px;
+}
+
+#scoreHeader {
+	width: 1500px;
+}
+
+#boardLayout {
+	background-color: transparent;
+	width: 99.8%;
+	height: 100%;
+	overflow-y:scroll;
+}
+
+#boardScript {
+	width: 100%;
+}
+
+@media (max-width: 808px){
+	#uiSet {
+		height: 140px;
+	}
+	#logo img {
+		float: left;
+		width: 144px;
+		height: 81px; 
+	}
+	#title img{
+		float: right;
+		width: 270px;
+		height: 81px; 
+	}
+	#buttonWrapper{
+		width: 100%;
+		height: 59px;
+		font-size:12px;
+	}
+	.selectionButton {
+		margin-top: 10px;
+		margin-left: 3.3%;
+		width: 43.3%;
+		height: 39px;
+		diplay: block;
+		font-size: 1.1rem;
+	}
+	#boardHeader th {
+		font-size: 1.2rem;
+	}
+}
+@media (max-width: 440px){
+	#uiSet {
+		height: 84px;
+	}
+	#logo img {
+		float: left;
+		width: 96px;
+		height: 54px; 
+	}
+	#title img{
+		float: right;
+		width: 180px;
+		height: 54px; 
+	}
+	#buttonWrapper{
+		width: 100%;
+		height: 30px;
+	}
+	.selectionButton {
+		margin-top: 5px;
+		margin-left: 6%;
+		width: 41%;
+		height: 20px;
+		diplay: block;
+		font-size: 0.7rem;
+	}
+	#boardHeader th {
+		font-size: 0.85rem;
+	}
+	
+@media (max-width: 330px){
+	#uiSet {
+		height: 84px;
+	}
+	#logo img {
+		float: right;
+		width: 100%;
+		height: 27px; 
+	}
+	#title img{
+		float: right;
+		width: 100%;
+		height: 27px; 
+	}
+	#buttonWrapper{
+		width: 100%;
+		height: 15px;
+	}
+	.selectionButton {
+		margin-top: 1px;
+		margin-left: 6%;
+		width: 41%;
+		height: 13px;
+		diplay: block;
+		font-size: 0.2rem;
+	}
+	#boardHeader th {
+		font-size: 0.3rem;
+	}
+}

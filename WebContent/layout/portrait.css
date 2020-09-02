@@ -1,0 +1,21 @@
+/* 세로모드 */
+
+#image1 {
+	width: 100%;
+	height: 50%;
+}
+
+#image2{
+	width: 100%;
+	height: 50%;
+}
+
+#src1 {
+	top: 20px;
+	right: 20px;
+}
+
+#pongSrc {
+	top: 20px;
+	right: 20px;
+}

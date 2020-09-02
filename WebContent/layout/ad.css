@@ -1,0 +1,88 @@
+ @charset "utf-8";
+
+.adContainer {
+  display: none;
+  position: absolute;
+	-webkit-transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	-moz-transform: translate(0%, -50%);
+	-o-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+	z-index: 1;
+}
+
+#landscape1, #shortLandscape1 { left: 2%; top: 50%; }
+
+#landscape2, #shortLandscape2 { right: 2%; top: 50%; }
+
+#widePortrait, #narrowPortrait, #longPortrait { left: 50%; top: 0; }
+
+#widePortrait {
+  margin-left: -364px; /* 728 / 2  90 50 100*/
+  margin-top: 45px;
+}
+
+#narrowPortrait {
+  margin-left: -160px; /* 320 / 2 */
+  margin-top: 25px;
+}
+
+#longPortrait {
+  margin-left: -160px; /* 320 / 2 */
+  margin-top: 50px;
+}
+
+/* 광고 미디어쿼리 분기점 */
+
+@media all and (max-width:860px) {
+  #narrowPortrait { display : block; }
+}
+
+@media all and (min-width:860px) and (max-width:1100px) and (max-height:433px) {
+  #longPortrait { display : block; }
+}
+
+@media all and (min-width:860px) and (max-width:1100px) and (min-height:433px) and (max-height:684px) {
+  #longPortrait, #shortLandscape1, #shortLandscape2 { display : block; }
+}
+
+@media all and (min-width:860px) and (max-width:1100px) and (min-height:685px) {
+  #longPortrait, #landscape1, #landscape2 { display : block; }
+}
+
+@media all and (min-width: 1101px) and (max-height:433px) {
+  #widePortrait { display : block; }
+}
+
+@media all and (min-width: 1101px) and (min-height:433px) and (max-height:684px) {
+  #widePortrait, #shortLandscape1, #shortLandscape2 { display : block; }
+}
+
+@media all and (min-width: 1101px) and (min-height:685px) {
+  #widePortrait, #landscape1, #landscape2 { display : block; }
+}
+
+/* 브라우저 높이가 420px 이하일 때 */
+@media all and (max-height: 420px) {
+  .adContainer {
+  	-webkit-transform: translate(0%, 0%);
+  	-ms-transform: translate(0%, 0%);
+  	-moz-transform: translate(0%, 0%);
+  	-o-transform: translate(0%, 0%);
+  	transform: translate(0%, 0%);
+  	z-index: 1;
+  }
+
+  #landscape1, #landscape2, #widePortrait, #longPortrait, #shortLandscape1, #shortLandscape2 {
+    display : none;
+  }
+
+  #narrowPortrait {
+    position: relative;
+    display : block;
+    left: 0px;
+    top: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}

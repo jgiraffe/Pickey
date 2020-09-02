@@ -1,0 +1,53 @@
+[02-Dec-2018 15:11:22 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'ff354_wjdgustjr1'@'infra-sivw-icn-e1.squarenet.kr' (using password: YES) in /home/ff354/public_html/query-rank.php on line 20
+[02-Dec-2018 15:11:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on boolean in /home/ff354/public_html/query-rank.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 33
+[02-Dec-2018 15:11:24 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'ff354_wjdgustjr1'@'infra-sivw-icn-e1.squarenet.kr' (using password: YES) in /home/ff354/public_html/query-rank.php on line 20
+[02-Dec-2018 15:11:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on boolean in /home/ff354/public_html/query-rank.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 33
+[02-Dec-2018 15:32:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:33:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:33:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:33:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:34:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:34:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:35:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:35:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:35:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 15:36:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 16:04:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[02-Dec-2018 16:04:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ff354/public_html/query-rank.php on line 59
+[05-Dec-2018 05:04:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51
+[05-Dec-2018 05:05:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51
+[05-Dec-2018 05:05:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51
+[05-Dec-2018 05:05:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51
+[03-Jan-2019 22:21:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 /home/ff354/public_html/check-session.php(16): queryRank(Array)
+#1 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51
+[04-Jan-2019 06:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 /home/ff354/public_html/check-session.php(16): queryRank(Array)
+#1 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51
+[04-Jan-2019 09:43:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/ff354/public_html/query-rank.php:51
+Stack trace:
+#0 /home/ff354/public_html/check-session.php(16): queryRank(Array)
+#1 {main}
+  thrown in /home/ff354/public_html/query-rank.php on line 51

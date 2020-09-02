@@ -1,0 +1,76 @@
+		#pongStick1  {
+			text-align: center;
+			background-color: transparent;
+			color: white;
+			width: 40px;
+			height: 150px;
+			position: absolute;
+			left: 40px;
+		}
+
+		#pongStick2 {
+			text-align: center;
+			background-color: transparent;
+			color: white;
+			width: 40px;
+			height: 150px;
+			position: absolute;
+			right: 40px;
+		}
+
+		#pongScore {
+			display: none;
+			position: absolute;
+			background-color: transparent;
+  		text-align: center;
+  		font-size: 120px;
+			color: white;
+			width: 80px;
+			height: 80px;
+			left: 50%;
+			top: 50%;
+			margin-left: -40px;
+			margin-top: -40px;
+			line-height: 70px;
+		}
+
+		#pongBall {
+			display: none;
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			left: 50%;
+			top: 50%;
+			background-color: transparent;
+			margin-left: -40px; /* width의 절반 */
+			margin-top: -40px; /* height의 절반 */
+		}
+
+		#pongBallText {
+			position: absolute;
+			background: white;
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			line-height: 80px;
+		}
+
+		#pongSrc {
+			display: none;
+			position: fixed;
+			background-color: transparent;
+			color: gray;
+			text-shadow: 1px 1px 1px black;
+			text-decoration: underline;
+		}
+
+		#pongSrc:hover { cursor: pointer; }
+
+		#exitPong {
+			display: none;
+			position: fixed;
+			color: white;
+			top: 20px;
+			right: 20px;
+		}
